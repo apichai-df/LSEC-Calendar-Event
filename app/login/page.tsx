@@ -1,0 +1,1 @@
+import AuthForm from "@/components/AuthForm";export default function Page(){return <main className="min-h-screen grid place-items-center p-5"><AuthForm mode="login"/></main>}

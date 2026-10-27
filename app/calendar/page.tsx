@@ -1,0 +1,1 @@
+import {createClient} from "@/lib/supabase/server";import {redirect} from "next/navigation";import CalendarApp from "@/components/CalendarApp";export default async function Page(){const s=await createClient();const {data:{user}}=await s.auth.getUser();if(!user)redirect('/login');return <CalendarApp userId={user.id}/>}
